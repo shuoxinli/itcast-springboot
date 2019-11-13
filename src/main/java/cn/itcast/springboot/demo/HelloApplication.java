@@ -1,7 +1,5 @@
 package cn.itcast.springboot.demo;
 
-import java.nio.charset.Charset;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -11,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.nio.charset.Charset;
+
 @Controller //标明这是一个springMVC的controller控制器
 //spring boot的核心注解，主要目的是开启自动配置，组合注解，里面有很多注解
 @SpringBootApplication //(exclude = {...class})排除某个自动配置
@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class HelloApplication {	//类名规则为 XXXApplication ，为整个应用的入口类
     
 	//@ComponentScan：默认扫描@SpringBootApplication所在类的同级目录以及它的子目录。
-	
 	//spring mvc的control写法
     @RequestMapping("hello")
     @ResponseBody
